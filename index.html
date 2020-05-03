@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sedat Sercan Cengiz Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+    
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+</head>
+
+<style>
+    .row>.column {
+        padding: 0 8px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Create four equal columns that floats next to eachother */
+    .column {
+        float: left;
+        width: 25%;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        padding: 75px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #000000;
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: black;
+        margin: auto;
+        text-align: center;
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Hide the slides by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* Caption text */
+    .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    img.demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+
+    .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .hover-overlay-container {
+        position: relative;
+        width: 250px;
+    }
+
+    .hover-overlay-container:hover .overlay-text-container {
+        opacity: 1;
+    }
+
+    .hover-overlay-container .overlay-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .hover-overlay-container .overlay-text-container {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #bd5d38;
+    }
+
+    .hover-overlay-container .overlay-text-container .overlay-text {
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        top: 15%;
+        text-align: center;
+        padding: 10px;
+    }
+
+</style>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Sedat Sercan CENGIZ</span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#project">Recently Done Project</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+            <div class="w-100">
+                <h1 class="mb-0">Sedat Sercan
+                    <span class="text-primary">Cengiz</span>
+                </h1>
+                <div class="subheading mb-5">Kecioren/Ankara
+                    <a href="mailto:name@email.com">sercancng@gmail.com</a>
+                </div>
+                <p class="lead mb-5">
+                    <p>Baskent Universities computer engineering department student, who strong in human relations, programmed and planned in his studies and sees software development as an entertainment rather than seeing it as a job. With more than 3 years of experience in Java and Android application development, he is skilled in this field and prone to teamwork. Developing their own projects at every opportunity. He has 6 months of research and development experience in machine learning and artificial intelligence. I have been working on web-based application development, designing websites and at the Front-End for a year. He is currently engaged in research and development activities on the autonomous drone movement in the field of artificial intelligence.</p>
+
+                    <li><a href="Sedat Sercan CENGIZ CV (Türkçe).pdf" download><i class="icon-download2"></i> Download CV (Turkish)</a></li>
+                    <li><a href="Sedat Sercan CENGIZ CV (English).pdf" download><i class="icon-download2"></i> Download CV (English)</a></li>
+
+                    <p></p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/sercan-cengiz/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/qapitall">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sercngiz/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+            <div class="w-100">
+                <h2 class="mb-5">Experience</h2>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Intern Engineer</h3>
+                        <div class="subheading mb-3">Turkish Aerospace Industries</div>
+                        <p>Designing and developing GUI for MMU project.</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">November 2019 - Present</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Intern</h3>
+                        <div class="subheading mb-3">HAVELSAN A.S</div>
+                        <p>Preparing XML for working in TeamCity program, XML Builder preparation to make it easier to prepare XML from available data, Designing and developing a GUI for the prepared XML Builder, Studies on Docker and AWX.</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">June 2019 - July 2019</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Intern Engineer</h3>
+                        <div class="subheading mb-3">Turkish Aerospace Industries</div>
+                        <p>Preparation of license management system and preparation of a website suitable for this system, Studies on time synchronization between servers.</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">November 2018 - June 2019</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Intern</h3>
+                        <div class="subheading mb-3">ATAR Labs Bilisim A.S</div>
+                        <p>Testing the previously prepared Scripts on the system, Preparing new scripts to work on ATAR, Preparation of job tracking system between jobs &amp; users.</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">June 2018 - July 2018</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+            <div class="w-100">
+                <h2 class="mb-5">Education</h2>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Baskent University</h3>
+                        <div class="subheading mb-3">Computer Engineering</div>
+                        <p>GPA: 3.49</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">September 2015 - Present</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Alparslan Anatolian High School</h3>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">September 2011 - June 2016</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+            <div class="w-100">
+                <h2 class="mb-5">Skills</h2>
+
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item">
+                        <i class="fab fa-python" title="Python"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-java" title="Java"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-android" title="Kotlin"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-c" title="C">C</i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-c++" title="C++">C++</i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-c#" title="C#">C#</i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-html5" title="HTML 5"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-js-square" title="JavaScript"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fas fa-database" title="SQL"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-adobe" title="Adope Photoshop"></i>
+                    </li>
+                </ul>
+
+                <div class="subheading mb-3">Workflow</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Agile Development &amp; Scrum</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="project">
+            <div class="w-100 ">
+                <h2 class="mb-5">Recently Done Project</h2>
+                <div class="row">
+                    <div class="column hover-overlay-container">
+                        <img src="img/Clia.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">Cilia (Android App)</h4>
+                                <span>
+                                    Development of the system that enables doctors to enter the diseases database, informing the user if there is an epidemic in the region where it is located
+                                </span>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" href="https://github.com/qapitall/cilia">Click for Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column hover-overlay-container">
+                        <img src="img/CriptoApp.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">Android App</h4>
+                                <span>
+                                    Firebase application that encrypts end-to-end using AES for internal communications
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column hover-overlay-container">
+                        <img src="img/DroneSimulationProject_1.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">C# Project</h4>
+                                <span>
+                                    Prepared to train the autonomous drone with Unity 3D, The aim is to create a different environment each time.
+                                </span>
+                                <p></p>
+                                <a style="text-decoration:underline; " onclick="openModal();currentSlide(1)">Click for Photos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column hover-overlay-container">
+                        <img src="img/Game.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">Java Project</h4>
+                                <span>
+                                    Game bot systems prepared with Selenium
+                                </span>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" href="https://github.com/qapitall/PopmundoGraffitiBot">Click for Review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="column hover-overlay-container">
+                        <img src="img/MarketApp.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">MarketApp (Android App)</h4>
+                                <span>
+                                    Showing the products in the system to the user, listing similar products and adding selected products to the basket
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column hover-overlay-container">
+                        <img src="img/WhereIsMyGift_1.jpg" style="width: 100%; border-style: solid;" style="width: 50%" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">Where Is My Gift (Adroid Game)</h4>
+                                <span>
+                                    Mobile game prepared with Android Studio
+                                </span>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" onclick="openModal();currentSlide(4)">Click for Photos</a>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" href="https://play.google.com/store/apps/details?id=com.quince.santa">Click for Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column hover-overlay-container">
+                        <img src="img/StackOfShape_1.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">Stack of Shape (Unity Game)</h4>
+                                <span>
+                                    Mobile game prepared with Unity 3D
+                                </span>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" onclick="openModal();currentSlide(6)">Click for Photos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column hover-overlay-container">
+                        <img src="img/UlasBana_1.jpg" style="width: 100%; border-style: solid;" class="hover-shadow overlay-image">
+                        <div class="overlay-text-container">
+                            <div class="overlay-text">
+                                <h4 style="color: white">UlasBana (Android Game)</h4>
+                                <span>
+                                    Visual design, interface development, earning points and saving the score in the database
+                                </span>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" onclick="openModal();currentSlide(10)">Click for Photos</a>
+                                <p></p>
+                                <a style="text-decoration:underline; color: white;" href="https://play.google.com/store/apps/details?id=com.quince_tech.ulasbana">Click for Review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 11</div>
+                <img src="img/DroneSimulationProject_2.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 11</div>
+                <img src="img/DroneSimulationProject_3.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 11</div>
+                <img src="img/DroneSimulationProject_4.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 11</div>
+                <img src="img/WhereIsMyGift_3.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 11</div>
+                <img src="img/WhereIsMyGift_2.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 11</div>
+                <img src="img/StackOfShape_2.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 11</div>
+                <img src="img/StackOfShape_3.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 11</div>
+                <img src="img/StackOfShape_4.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">9 / 11</div>
+                <img src="img/StackOfShape_5.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">10 / 11</div>
+                <img src="img/UlasBana_2.jpg" style="max-width: 100%;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">11 / 11</div>
+                <img src="img/UlasBana_3.jpg" style="max-width: 100%;">
+            </div>
+
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="row">
+                <img class="demo" src="img/DroneSimulationProject_2.jpg" onclick="currentSlide(1)" style="width:10%; margin-right: 10px" alt="Simulation Environment for Autonomous Drone Training 1">
+
+                <img class="demo" src="img/DroneSimulationProject_3.jpg" onclick="currentSlide(2)" style="width:10%; margin-right: 10px" alt="Simulation Environment for Autonomous Drone Training 2">
+
+                <img class="demo" src="img/DroneSimulationProject_4.jpg" onclick="currentSlide(3)" style="width:10%; margin-right: 10px" alt="Simulation Environment for Autonomous Drone Training 3">
+
+                <img class="demo" src="img/WhereIsMyGift_3.jpg" onclick="currentSlide(4)" style="width:10%; margin-right: 10px" alt="Where Is My Gift Android Game 1">
+
+                <img class="demo" src="img/WhereIsMyGift_2.jpg" onclick="currentSlide(5)" style="width:10%; margin-right: 10px" alt="Where Is My Gift Android Game 2">
+
+                <img class="demo" src="img/StackOfShape_2.jpg" onclick="currentSlide(6)" style="width:5%; margin-right: 10px" alt="Stack Of Shape Android Game 1">
+
+                <img class="demo" src="img/StackOfShape_3.jpg" onclick="currentSlide(7)" style="width:5%; margin-right: 10px" alt="Stack Of Shape Android Game 2">
+
+                <img class="demo" src="img/StackOfShape_4.jpg" onclick="currentSlide(8)" style="width:5%; margin-right: 10px" alt="Stack Of Shape Android Game 3">
+
+                <img class="demo" src="img/StackOfShape_5.jpg" onclick="currentSlide(9)" style="width:5%; margin-right: 10px" alt="Stack Of Shape Android Game 4">
+
+                <img class="demo" src="img/UlasBana_2.jpg" onclick="currentSlide(10)" style="width:10%; margin-right: 10px" alt="Ulas Bana Android Game 1">
+
+                <img class="demo" src="img/UlasBana_3.jpg" onclick="currentSlide(11)" style="width:10%; margin-right: 10px" alt="Ulas Bana Android Game 2">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2020 Sedat Sercan CENGIZ. Template by <a href="https://github.com/BlackrockDigital/startbootstrap-resume">Start Bootstrap</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
